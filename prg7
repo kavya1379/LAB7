@@ -1,0 +1,39 @@
+def calculate_simple_interest(principal, rate, time):
+  """
+  Calculates the Simple Interest (SI) given Principal, Rate, and Time.
+
+  Formula: SI = (Principal * Rate * Time) / 100
+
+  Args:
+    principal (float): The initial amount of money (P).
+    rate (float): The annual rate of interest (R, as a percentage).
+    time (float): The time period in years (T).
+
+  Returns:
+    float: The calculated simple interest amount.
+  """
+ 
+  simple_interest = (principal * rate * time) / 100
+  return simple_interest
+
+
+
+P = 10000.0  # Principal: $10,000
+R = 5.0      # Rate: 5% per annum
+T = 3.0      # Time: 3 years
+
+
+interest = calculate_simple_interest(P, R, T)
+
+
+total_amount = P + interest
+
+print("--- Simple Interest Calculation ---")
+print(f"Principal Amount (P): ${P:,.2f}")
+print(f"Annual Interest Rate (R): {R}%")
+print(f"Time Period (T): {T} years")
+print("-" * 35)
+
+
+print(f" Simple Interest (I): ${interest:,.2f}")
+print(f"Total Amount Payable: ${total_amount:,.2f}")
